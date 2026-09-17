@@ -1,0 +1,34 @@
+{
+    "name": "vim-terminal-context",
+    "displayName": "Vim Terminal Context",
+    "description": "Detect Vim/Neovim running in the active VS Code integrated terminal.",
+    "version": "0.0.2",
+    "publisher": "local",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vimTerminalContext.check",
+                "title": "Vim Terminal Context: Check"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/vscode": "^1.90.0",
+        "typescript": "^5.4.0"
+    }
+}
